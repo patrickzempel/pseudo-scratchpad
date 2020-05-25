@@ -1,7 +1,7 @@
 # pseudo-scratchpad
 A quick and dirty implementation of the i3wm scratchpad in xfce
 
-![](pseudo-scratchpad.gif)
+![](pseudo_scratchpad.gif)
 
 ## But why ? 
 I recently switched from [i3wm](https://i3wm.org/) to [xfce](https://xfce.org/) and while I really like the more user-friendly environment with less tinkering, I missed one special feature of [i3wm](https://i3wm.org) - [the scratchpad](https://i3wm.org/docs/userguide.html#_scratchpad).
