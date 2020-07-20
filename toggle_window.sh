@@ -8,9 +8,12 @@ if [[ -s $file ]] ; then
     xdotool windowmove $wid $geo
     cat /dev/null > $file
 else 
-    wid=`xdotool getactivewindow`      
-    geo=`xdotool getwindowgeometry $wid | grep 'Position' | cut -f4 -d' ' | tr ',' ' '`
-    xdotool windowunmap $wid
-    echo $wid > $file
-    echo $geo >> $file
+    wid=`xdotool getactivewindow`
+    name=`xdotool getwindowname ${wid} | cut -f4 -d' '`
+    if [ ${name} == "scratch" ] ; then
+        geo=`xdotool getwindowgeometry $wid | grep 'Position' | cut -f4 -d' ' | tr ',' ' '`
+        xdotool windowunmap $wid
+        echo $wid > $file
+        echo $geo >> $file
+    fi
 fi
